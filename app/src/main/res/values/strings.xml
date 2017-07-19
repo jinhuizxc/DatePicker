@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">DatePicker</string>
+
+    <string name="pickerview_year">年</string>
+    <string name="pickerview_month">月</string>
+    <string name="pickerview_day">日</string>
+    <string name="desc_select_date">选择时间</string>
+    <string name="nextday">后一天</string>
+    <string name="preday">前一天</string>
+</resources>

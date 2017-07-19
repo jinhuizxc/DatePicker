@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jh.datepicker.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:elevation="2dp">
+        <LinearLayout
+            android:id="@+id/ll_selectedtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:padding="6dp"
+                android:text="@string/desc_select_date" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@mipmap/next"/>
+        </LinearLayout>
+        <Button
+            android:id="@+id/btn_nextday"
+            style="@style/history_buttonStyle"
+            android:layout_width="60dp"
+            android:layout_height="25dp"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginBottom="20px"
+            android:layout_marginEnd="@dimen/fab_margin"
+            android:layout_marginTop="20px"
+            android:text="@string/nextday"
+            android:textSize="@dimen/tv_little" />
+        <Button
+            android:id="@+id/btn_preday"
+            style="@style/history_buttonStyle"
+            android:layout_width="60dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="20px"
+            android:layout_marginStart="@dimen/fab_margin"
+            android:layout_marginTop="20px"
+            android:text="@string/preday"
+            android:textSize="@dimen/tv_little" />
+    </FrameLayout>
+
+</RelativeLayout>
