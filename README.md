@@ -17,8 +17,9 @@
 ```
   如果你觉得以上对你有帮助，欢迎给个star!
   
-以及关注我的相关分享地址：[简书]()|[csdn](http://blog.csdn.net/jinhui157)，
+以及关注我的相关分享地址：
 ```
+[简书]()|[csdn](http://blog.csdn.net/jinhui157)，
 
 
 
