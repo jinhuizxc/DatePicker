@@ -34,11 +34,32 @@
             }
         });
 ```
-* 2.自定义的popwindow：
+* 2.自定义的popwindow （由于代码比较多这里就不详细说明了，具体可以建项目源码。）
 ```
-dsfsdf
-```
+年/月/日的监听方法都是类似的贴出其中一个：
+wvYear.addChangingListener(new OnWheelChangedListener() {
 
+            @Override
+            public void onChanged(WheelView wheel, int oldValue, int newValue) {
+                // TODO Auto-generated method stub
+                String currentText = (String) mYearAdapter.getItemText(wheel.getCurrentItem());
+                selectYear = currentText;
+                setTextviewSize(currentText, mYearAdapter);
+                currentYear = currentText.substring(0, currentText.length() - 1).toString();
+                Log.d("currentYear==", currentYear);
+                setYear(currentYear);
+                initMonths(Integer.parseInt(month));
+                mMonthAdapter = new CalendarTextAdapter(context, arry_months, 0, maxTextSize, minTextSize);
+                wvMonth.setVisibleItems(5);
+                wvMonth.setViewAdapter(mMonthAdapter);
+                wvMonth.setCurrentItem(0);
+
+                calDays(currentYear, month);
+            }
+        });
+```
+* 3.自定义的wheelView 代码比较多有1000行代码，如果你需要用直接粘过来就可以了，不做详细描述
+* 4.项目中用到的适配器，继承关系比较复杂，希望读者好好学习理解啦。
 
 - 如果你觉得以上对你有帮助，欢迎给个star!
 
