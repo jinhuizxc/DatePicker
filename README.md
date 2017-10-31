@@ -12,7 +12,27 @@
 <img src = "https://github.com/jinhuizxc/DatePicker/blob/master/screenshots/img2.jpg">
 
 ## 代码块-简要分析
+主界面布局很简单，主要介绍选择日期的点击事件。
+1.选择日期的点击事件：
+```
+ ll_selectedtime.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final String[] str = new String[10];
+                final ChangeDatePopwindow mChangeBirthDialog = new ChangeDatePopwindow(MainActivity.this);
+//                mChangeBirthDialog.setDate("2017", "6", "20");
+                mChangeBirthDialog.showAtLocation(frameLayout, Gravity.TOP, 0, 400);
+                mChangeBirthDialog.setBirthdayListener(new ChangeDatePopwindow.OnBirthListener() {
 
+                    @Override
+                    public void onClick(String year, String month, String day) {
+
+                        selectDate(Integer.parseInt(year), Integer.parseInt(month) - 1, Integer.parseInt(day));
+                    }
+                });
+            }
+        });
+```
 
 
 ```
