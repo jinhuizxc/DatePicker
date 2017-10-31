@@ -3,9 +3,8 @@
 
   每当我们在做日期选择器的时候通常是用原生的日期选择器，但是远远满足不了项目需求，那么当我们自己去写的时候困难还是有的，今天为大家分享一下自定义的日期选择器，分享交流开心你我他！
 
-## 项目效果图
+## 项目效果图及GIF效果
 <img src = "https://github.com/jinhuizxc/DatePicker/blob/master/screenshots/img1.jpg">
-## GIF
 <img src = "https://github.com/jinhuizxc/DatePicker/blob/master/screenshots/2.gif">
 
 ##  项目目录结构
