@@ -16,10 +16,9 @@
 # 关于我
 ```
   如果你觉得以上对你有帮助，欢迎给个star!
-  
-以及关注我的相关分享地址：
 ```
-[简书]()|[csdn](http://blog.csdn.net/jinhui157)，
+
+## [简书](http://www.jianshu.com/u/e0d050a2120f)|[csdn](http://blog.csdn.net/jinhui157)，
 
 
 
