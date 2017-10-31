@@ -61,10 +61,10 @@ wvYear.addChangingListener(new OnWheelChangedListener() {
 * 3.自定义的wheelView 代码比较多有1000行代码，如果你需要用直接粘过来就可以了，不做详细描述
 * 4.项目中用到的适配器，继承关系比较复杂，希望读者好好学习理解啦。
 
-- 如果你觉得以上对你有帮助，欢迎给个star!
+
+## 如果你觉得以上对你有帮助，欢迎给个star!
 
 ## 关于我
-
 ## [简书](http://www.jianshu.com/u/e0d050a2120f)|[csdn](http://blog.csdn.net/jinhui157)
 
 
