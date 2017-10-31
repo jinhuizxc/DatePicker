@@ -35,8 +35,8 @@
 ```
 
 * 2.自定义的popwindow （由于代码比较多这里就不详细说明了，具体可以建项目源码。）
-```
 年/月/日的监听方法都是类似的贴出其中一个：
+```
 wvYear.addChangingListener(new OnWheelChangedListener() {
 
             @Override
@@ -104,9 +104,8 @@ wvYear.addChangingListener(new OnWheelChangedListener() {
 	};
 ```
 
-* 4.项目中用到的适配器，继承关系比较复杂，希望读者好好学习理解啦。
+* 4.项目中用到的适配器，继承关系比较复杂，希望读者好好学习理解啦。在wheelview里面主要用到的是CalendarTextAdapter，继承自AbstractWheelTextAdapter1，贴出部分代码，代码比较多，望读者好好体会了。
 ```
-在wheelview里面主要用到的是CalendarTextAdapter，继承自AbstractWheelTextAdapter1，贴出部分代码，代码比较多，望读者好好体会了。
  class CalendarTextAdapter extends AbstractWheelTextAdapter1 {
         ArrayList<String> list;
 
