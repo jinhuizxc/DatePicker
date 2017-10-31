@@ -58,9 +58,79 @@ wvYear.addChangingListener(new OnWheelChangedListener() {
             }
         });
 ```
-* 3.自定义的wheelView 代码比较多有1000行代码，如果你需要用直接粘过来就可以了，不做详细描述
-* 4.项目中用到的适配器，继承关系比较复杂，希望读者好好学习理解啦。
+* 3.自定义的wheelView 代码比较多有1000行代码，如果你需要用直接粘过来就可以了，不做详细描述。
+```
+滚轮wheelview的监听部分
+// Scrolling listener
+	WheelScroller.ScrollingListener scrollingListener = new WheelScroller.ScrollingListener() {
+		@Override
+		public void onStarted() {
+			isScrollingPerformed = true;
+			notifyScrollingListenersAboutStart();
+		}
 
+		@Override
+		public void onScroll(int distance) {
+			doScroll(distance);
+
+			int height = getHeight();
+			if (scrollingOffset > height) {
+				scrollingOffset = height;
+				scroller.stopScrolling();
+			} else if (scrollingOffset < -height) {
+				scrollingOffset = -height;
+				scroller.stopScrolling();
+			}
+		}
+
+		@Override
+		public void onFinished() {
+			if (isScrollingPerformed) {
+				notifyScrollingListenersAboutEnd();
+				isScrollingPerformed = false;
+			}
+
+			scrollingOffset = 0;
+			invalidate();
+		}
+
+		@Override
+		public void onJustify() {
+			if (Math.abs(scrollingOffset) > WheelScroller.MIN_DELTA_FOR_SCROLLING) {
+				scroller.scroll(scrollingOffset, 0);
+			}
+		}
+	};
+```
+* 4.项目中用到的适配器，继承关系比较复杂，希望读者好好学习理解啦。
+```
+在wheelview里面主要用到的是CalendarTextAdapter，继承自AbstractWheelTextAdapter1，贴出部分代码，代码比较多，望读者好好体会了。
+ class CalendarTextAdapter extends AbstractWheelTextAdapter1 {
+        ArrayList<String> list;
+
+        protected CalendarTextAdapter(Context context, ArrayList<String> list, int currentItem, int maxsize, int minsize) {
+            super(context, R.layout.item_birth_year, NO_RESOURCE, currentItem, maxsize, minsize);
+            this.list = list;
+            setItemTextResource(R.id.tempValue);
+        }
+
+        @Override
+        public View getItem(int index, View cachedView, ViewGroup parent) {
+            View view = super.getItem(index, cachedView, parent);
+            return view;
+        }
+
+        @Override
+        public int getItemsCount() {
+            return list.size();
+        }
+
+        @Override
+        protected CharSequence getItemText(int index) {
+            return list.get(index) + "";
+        }
+    }
+```
 
 ## 如果你觉得以上对你有帮助，欢迎给个star!
 
