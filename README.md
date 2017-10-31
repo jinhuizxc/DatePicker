@@ -13,7 +13,8 @@
 
 ## 代码块-简要分析
 主界面布局很简单，主要介绍选择日期的点击事件。
-1.选择日期的点击事件：
+
+* 1.选择日期的点击事件：
 ```
  ll_selectedtime.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,11 +34,14 @@
             }
         });
 ```
+* 2.自定义的popwindow：
+```
+dsfsdf
+```
 
 
-```
-  如果你觉得以上对你有帮助，欢迎给个star!
-```
+- 如果你觉得以上对你有帮助，欢迎给个star!
+
 ## 关于我
 
 ## [简书](http://www.jianshu.com/u/e0d050a2120f)|[csdn](http://blog.csdn.net/jinhui157)
