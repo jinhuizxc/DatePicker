@@ -6,7 +6,7 @@
 ## 项目效果图
 <img src = "https://github.com/jinhuizxc/DatePicker/blob/master/screenshots/img1.jpg">
 ## GIF
-<img src = "https://github.com/jinhuizxc/DatePicker/blob/master/screenshots/2.jpg">
+<img src = "https://github.com/jinhuizxc/DatePicker/blob/master/screenshots/2.gif">
 
 ##  项目目录结构
 <img src = "https://github.com/jinhuizxc/DatePicker/blob/master/screenshots/img2.jpg">
